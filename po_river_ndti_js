@@ -10,7 +10,6 @@ var geometry = ee.Geometry.Polygon([
 
 Map.centerObject(geometry);
 
-
 var sen = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
   .filterDate('2023', '2024')
   .filterBounds(geometry)
@@ -19,7 +18,6 @@ var sen = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
   .median()
   .multiply(0.0001);
 
-
 Map.addLayer(
   sen.clip(geometry),
   {bands: ['B8', 'B4', 'B3']},
@@ -27,30 +25,15 @@ Map.addLayer(
   false
 );
 
-
 var ndwi = sen.normalizedDifference(['B3', 'B8']).rename('ndwi');
-
 Map.addLayer(ndwi.clip(geometry), {}, 'ndwi', false);
-
-
 print(ui.Chart.image.histogram(ndwi, geometry, 100));
-
-
 var thr = ndwi.gt(0.06);
-
 Map.addLayer(thr.clip(geometry), {}, 'thr', false);
-
-
 var sen_mask = sen.updateMask(thr);
-
 Map.addLayer(sen_mask.clip(geometry), {}, 'sen_mask', false);
-
-
 var ndti = sen_mask.normalizedDifference(['B4', 'B3']).rename('ndti');
-
-
 var ndti_smooth = ndti.focal_mean(30, 'circle', 'meters');
-
 
 Map.addLayer(
   ndti_smooth.clip(geometry),
