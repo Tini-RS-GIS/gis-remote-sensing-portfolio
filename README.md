@@ -1,6 +1,6 @@
 GIS & Remote Sensing Portfolio
 
-+ Turbidity Index Mapping (NDTI) – Po River Delta, Italy
+Project 1 - Turbidity Index Mapping (NDTI) – Po River Delta, Italy
 
 This project estimates water turbidity using Sentinel-2 satellite imagery in Google Earth Engine.
 
@@ -17,14 +17,11 @@ Output
 
 Tools Used
 - Google Earth Engine
-- QGIS (planned for visualization)
 
 Status
 - Code completed
-- Map visualization in progress
 
-
-+ Vegetation Mapping (NDVI) – Hamburg, Germany
+Project 2 - Vegetation Mapping (NDVI) – Hamburg, Germany
 
 This project maps vegetation density in Hamburg using Sentinel-2 satellite imagery and the Normalized Difference Vegetation Index (NDVI).
 
