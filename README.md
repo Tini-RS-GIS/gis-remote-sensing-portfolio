@@ -13,7 +13,7 @@ Methodology
 - Sentinel-2 Surface Reflectance data was used  
 - NDWI (Normalized Difference Water Index) was calculated  
 - Threshold (NDWI > 0.06) applied to extract water bodies  
-- Water mask applied to remove non-water pixels  
+- Water mask applied to remove non water pixels  
 - NDTI (Normalized Difference Turbidity Index) calculated using Red (B4) and Green (B3)  
 - Spatial smoothing applied using a focal mean filter  
 
@@ -41,7 +41,7 @@ This project maps vegetation density in Hamburg using Sentinel-2 satellite image
 - Visualization used a focused NDVI range (0.1–0.7) to highlight vegetation patterns  
 
 Output
-- Vegetation density map showing low, medium, and high vegetation areas  
+- Vegetation density map showing low, medium and high vegetation areas  
 
 Tools Used
 - Google Earth Engine  
