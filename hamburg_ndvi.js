@@ -1,4 +1,4 @@
-var hamburg = ee.Geometry.Rectangle([9.7, 53.35, 10.35, 53.75]);
+var hamburg = geometry;
 
 var sen = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
   .filterDate('2025-06-01', '2025-08-31')
@@ -14,5 +14,5 @@ Map.centerObject(hamburg, 10);
 Map.addLayer(ndvi, {
   min: 0.1,
   max: 0.7,
-  palette: ['brown', 'yellow', 'green']
+  palette: ['red', 'yellow', 'green']
 }, 'NDVI Hamburg');
