@@ -43,7 +43,7 @@ Map.addLayer(
     palette: ['blue', 'green', 'yellow', 'orange', 'red']
   },
   'ndti',
-  false
+  true
 );
 
 
