@@ -5,7 +5,7 @@ This repository contains my GIS and Remote Sensing projects using Google Earth E
 
 ---
 
-# NDVI Vegetation Density Map of Hamburg (Summer 2025)
+## NDVI Vegetation Density Map of Hamburg (Summer 2025)
 
 This project presents an NDVI-based vegetation density map of Hamburg using Sentinel-2 imagery processed in Google Earth Engine and visualized in QGIS.
 
