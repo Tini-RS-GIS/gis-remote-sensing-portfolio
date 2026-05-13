@@ -24,7 +24,6 @@ Map.addLayer(
   'false color',
   false
 );
-
 var ndwi = sen.normalizedDifference(['B3', 'B8']).rename('ndwi');
 Map.addLayer(ndwi.clip(geometry), {}, 'ndwi', false);
 print(ui.Chart.image.histogram(ndwi, geometry, 100));
