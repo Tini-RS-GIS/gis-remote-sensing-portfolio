@@ -16,3 +16,13 @@ Map.addLayer(ndvi, {
   max: 0.7,
   palette: ['red', 'yellow', 'green']
 }, 'NDVI Hamburg');
+
+Export.image.toDrive({
+  image: ndvi,
+  description: 'NDVI_Hamburg_2025',
+  folder: 'GEE_Exports',
+  fileNamePrefix: 'hamburg_ndvi',
+  region: hamburg,
+  scale: 10,
+  maxPixels: 1e13
+});
